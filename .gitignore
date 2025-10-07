@@ -35,6 +35,11 @@
 .vs/
 .idea/
 
+CaveSlasherWeb/
+CaveSlasherOSX/
+CaveSlasherLinux/
+CaveSlasherWindows/
+
 # Gradle cache directory
 .gradle/
 

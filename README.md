@@ -32,7 +32,7 @@ Sprite movement is present through both the player and enemies. The player movem
 GameObjects are dynamically spawned and destroyed throughout the game. Enemies are spawned at the start of each level based on their placement in the scene, while coins are spawned through a combination of pre-placed coins in the scene and coins that are spawned when an enemy is defeated. GameObjects are destroyed when they are no longer needed, such as when an enemy is defeated or when the player collects a coin.
 <br>
 <br>
-The game has been built for desktop platforms, with executables available for both Windows and MacOS on the [Releases Page](https://github.com/wiji1/CaveSlasher/releases/new). There is also a version hosted on [Unity Play](https://play.unity.com/en/games/032d5499-0ef0-4ba2-bb32-1b0bb16b7a93/sprite-flight).
+The game has been built for desktop platforms, with executables available for both Windows and MacOS on the [Releases Page](https://github.com/wiji1/CaveSlasher/releases). There is also a version hosted on [Unity Play](https://play.unity.com/en/games/032d5499-0ef0-4ba2-bb32-1b0bb16b7a93/sprite-flight).
 
 ## Future Development
 Cave Slasher is still in the early stages of development, with many features and levels yet to be implemented. Future development plans include:
