@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="DamageVignette" class="damage-vignette" />
+    <ui:VisualElement name="HealthContainer" class="health-container" style="height: 162px; align-self: flex-end; right: 5%; top: 2%;" />
+</ui:UXML>
