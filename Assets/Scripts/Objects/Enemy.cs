@@ -4,8 +4,6 @@ using UnityEngine;
 
 public abstract class Enemy : Combatant
 {
-    private const float DetectionRadius = 8f;
-    
     private Action<bool> _updateCallback;
     
     private AnimationController<EnemyAnimationParameter> _animationController;
@@ -33,6 +31,8 @@ public abstract class Enemy : Combatant
     protected abstract AudioSource GetAudioSource();
 
     protected abstract string GetAudioPath();
+
+    protected abstract float GetDetectionRadius();
 
     protected override IAnimationController GetAnimationController()
     {
@@ -63,7 +63,7 @@ public abstract class Enemy : Combatant
         var distance = Vector2.Distance(playerBounds.center, enemyBounds.center);
         var enemyDiameter = enemyBounds.extents.magnitude;
 
-        if (distance > DetectionRadius) return;
+        if (distance > GetDetectionRadius()) return;
         
         if (distance > enemyDiameter + GetStats().AttackRange)
         {

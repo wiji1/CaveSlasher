@@ -4,6 +4,7 @@ using UnityEngine;
 public class SkeletonEnemy : Enemy
 {
     private Action<bool> _updateCallback;
+    public float detectionRadius = 8f;
     
     protected override void UpdateConsumer(Action<bool> action)
     {
@@ -28,6 +29,11 @@ public class SkeletonEnemy : Enemy
     protected override void OnDeath()
     {
       
+    }
+    
+    protected override float GetDetectionRadius()
+    {
+        return detectionRadius;
     }
     
     public override Collider2D GetCollider()

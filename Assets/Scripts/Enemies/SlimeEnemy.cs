@@ -5,6 +5,7 @@ using UnityEngine;
 public class SlimeEnemy : Enemy
 {
     private Action<bool> _updateCallback;
+    public float detectionRadius = 8f;
     
     protected override void UpdateConsumer(Action<bool> action)
     {
@@ -13,7 +14,7 @@ public class SlimeEnemy : Enemy
 
     protected override CombatantStats GetStats() => new(
         maxHealth: 2, 
-        attackRange: 1.0f, 
+        attackRange: 0.8f, 
         attackCooldown: 1.5f, 
         invulnerabilityDuration: 0f, 
         attackDamage: 1, 
@@ -30,7 +31,12 @@ public class SlimeEnemy : Enemy
     {
       
     }
-    
+
+    protected override float GetDetectionRadius()
+    {
+        return detectionRadius;
+    }
+
     public override Collider2D GetCollider()
     {
         return transform.GetChild(0).GetComponent<Collider2D>();
